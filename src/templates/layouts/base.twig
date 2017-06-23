@@ -1,19 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ config.app.lang }}">
 <head>
     <meta charset="UTF-8">
     <title>TemplateMaster</title>
     <link rel="stylesheet" href="/assets/dist/css/main.css">
+
+    {% include "modules/meta-seo.twig" %}
+    {% include "modules/meta-app-icons.twig" %}
+
+    {% if config.gtm.enabled %}
+        {% include "vendor/google-tag-manager/gtm_head.twig" %}
+    {% endif %}
+
 </head>
 <body>
+{% if config.gtm.enabled %}{% include "vendor/google-tag-manager/gtm_body.twig" %}{% endif %}
 
 <div style="border: 1px solid black">
     {% block templateList %}{% endblock %}
 </div>
-
 <div>
     {% block content %}{% endblock %}
 </div>
+
+
+{% if config.vendor.photoswipe.enabled %}{% include "vendor/photoswipe/vendor-photoswipe.twig" %}{% endif %}
 <script src="/assets/dist/js/lib.js"></script>
 <script src="/assets/dist/js/bundle.js"></script>
 </body>
