@@ -1,8 +1,8 @@
-#Simple SCSS & JS & HTML pipeline
+# Simple SCSS & JS & HTML pipeline
 
 - this is simple helper for quick html & styling
 
-###Features:
+### Features:
 -   Sass compiling
 -   Foundation 6 base
 -   Webpack TS compiling
@@ -13,12 +13,12 @@
 -   Only NPM dependency management
 
 
-####Instalation:
+#### Instalation:
 ```
 npm install
 ```
 
-####Run:
+#### Run:
 ```
 // compile, watch 
 > gulp server
@@ -35,7 +35,7 @@ npm install
 ```
 
 
-###Configs for bundling & TS:
+### Configs for bundling & TS:
  
 ##### Library: (lib.js & lib.css)
 
@@ -43,17 +43,17 @@ npm install
 /src/build/library.config.js 
 ```
 
-#####Webpack & TS
+##### Webpack & TS
 
 ```
 /src/build/webpack.config.js
 ```
 
-####Notes:
+#### Notes:
 
 - nothing ready for PROD version (gulp, server)
 
-####Known issues:
+#### Known issues:
 
 - errors not handled with extra care
 - need restart to rebundle third party JS and CSS files
