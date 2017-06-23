@@ -1,3 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 node_modules/
 src/styles/-deprecated/
+
+# disable dist files need rebuild each time
+public/assets/dist/
