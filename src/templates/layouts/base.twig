@@ -16,9 +16,8 @@
 <body>
 {% if config.gtm.enabled %}{% include "vendor/google-tag-manager/gtm_body.twig" %}{% endif %}
 
-<div style="border: 1px solid black">
-    {% block templateList %}{% endblock %}
-</div>
+<div style="border: 1px solid black">{% block templateList %}template list{% endblock %}</div>
+
 <div>
     {% block content %}{% endblock %}
 </div>
