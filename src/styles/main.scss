@@ -1,0 +1,50 @@
+// WinWinJob Sass app
+
+// core settings & variables
+// -------------
+@import "settings";
+
+
+// Foundation base
+// ---------------
+
+// load & init custom foundation build
+@import "vendor/settings";
+@import 'vendor/foundation';
+@include foundation-everything($flex: true);
+@import "vendor/foundation_overrides";
+
+
+// vendor CSS
+// ----------
+
+// framework core
+// --------------
+
+@import "core/core";
+@import "core/spacing";
+@import "core/fonts";
+@import "core/colors";
+@import "core/forms";
+@import "core/typography";
+
+
+// layouts
+// -------
+
+@import "layout/layout";
+
+// modules
+// -------
+
+
+
+
+
+
+// print
+// -----
+// @import "print";
+
+// dev overrides
+@import "dev";

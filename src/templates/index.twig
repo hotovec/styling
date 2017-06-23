@@ -1,0 +1,19 @@
+{% extends "./layouts/base.twig" %}
+
+{% block templateList %}
+    template list
+{% endblock %}
+
+
+{% block content %}
+    <div>
+        this is content
+
+        {% for template in templates %}
+            <div>
+                {{ template.name }}
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}

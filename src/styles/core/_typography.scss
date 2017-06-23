@@ -1,0 +1,26 @@
+table {
+    margin-bottom: $space * 2;
+}
+
+table.table-half {
+
+    font-size: rem-calc(14);
+    width: 100%;
+    position: relative;
+    border-collapse: collapse;
+
+    //thead {
+    //    border-bottom: 1px dotted $color-body-text;
+    //}
+
+    td, th {
+        width: 50%;
+        vertical-align: top;
+        padding-right: $space;
+    }
+
+    @include breakpoint(medium) {
+        font-size: rem-calc(16);
+    }
+
+}

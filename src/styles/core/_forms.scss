@@ -1,0 +1,28 @@
+
+// login form social buttons
+.confirm-button {
+  @include button(false, $color-primary, darken($color-primary, 10%), #fff);
+
+}
+
+
+#facebook-button {
+  @include button(true, #4267cb, #4159b6, #fff);
+}
+
+#google-oauth2-button {
+  @include button(true, #fff, #eee, #444);
+  border: 1px solid #ccc;
+}
+
+
+// alerts
+
+.alert {
+  font-size: rem-calc(13);
+  padding: 10px;
+}
+
+.alert-danger {
+  color: #d53332;
+}

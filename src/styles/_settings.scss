@@ -1,0 +1,24 @@
+// Core settings
+// version of library
+$core_version: 1.0;
+$isbootstrap: false !default;
+
+$space: 20px;
+
+$color-primary: #ee7030;
+$color-secondary: #efecea;
+$color-body-text: #58595B;
+$color-gray: #939598;
+$color-gray-light: lighten($color-gray, 16%);
+
+$color-accent: $color-primary;
+$color-body-background: #fbfaf6;
+$color-footer-background: #2b2d2e;
+$color-wwj-blue: #5767ae;
+$color-wwj-yellow: #fdb205;
+$color-blue-bright: #1976C4;
+
+$m-company-bar-height: 44px;
+
+$color-facebook:#365899;
+$color-twitter: #51a9ef;

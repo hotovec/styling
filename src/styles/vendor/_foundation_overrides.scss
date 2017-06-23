@@ -1,0 +1,37 @@
+
+/*
+override native foundation dropdown with fontAwesome icon
+*/
+
+@mixin foundationAwesomeDropdown($font_awesome_unicode: '\f107') {
+  .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+    display: inline;
+    width: auto;
+    height: auto;
+    font-family: FontAwesome;
+    content: $font_awesome_unicode;
+    background-color: transparent;
+    border: none;
+    margin-top: 0;
+  }
+  .is-dropdown-submenu-parent a::after {
+    position: absolute;
+    //top: initial;
+    transform: translateY(-50%);
+  }
+}
+
+
+.button {
+  text-transform: uppercase;
+}
+
+
+.input:disabled, input[readonly], textarea:disabled, textarea[readonly] {
+  background-color: transparent;
+  pointer-events: none;
+}
+
+textarea {
+  line-height: 1.6em;
+}

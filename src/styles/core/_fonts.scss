@@ -1,0 +1,125 @@
+// fonts
+
+@mixin font-subhed() {
+
+  font-size: rem-calc(24);
+  line-height: 1.3em;
+  font-weight: 100;
+
+  @include breakpoint(large) {
+    font-size: rem-calc(30);
+  }
+}
+
+.f-subhead {
+  @include font-subhed();
+}
+
+.f-uppercase {
+  text-transform: uppercase;
+}
+
+.f-100 {
+  font-weight: 100;
+}
+
+.f-300 {
+  font-weight: 300;
+}
+
+.f-400 {
+  font-weight: 400;
+}
+
+.f-600 {
+  font-weight: 600;
+}
+
+.f-800 {
+  font-weight: 800;
+}
+
+.f-xs {
+  font-size: rem-calc(14);
+  line-height: 1.3em;
+}
+
+.f-s {
+  font-size: rem-calc(16);
+  line-height: 1.3em;
+}
+
+.f-m {
+  font-size: rem-calc(18);
+  line-height: 1.3em;
+}
+
+.f-l {
+  font-size: rem-calc(22);
+  line-height: 1.3em;
+}
+
+.f-xl {
+  font-size: rem-calc(32);
+  line-height: 1.2em;
+
+  @include breakpoint(large) {
+    font-size: rem-calc(36);
+    line-height: 1.2em;
+  }
+}
+
+.f-xxl {
+  font-size: rem-calc(30);
+  line-height: 1.1em;
+  @include breakpoint(medium) {
+    font-size: rem-calc(36);
+    line-height: 1.1em;
+
+  }
+  @include breakpoint(large) {
+    font-size: rem-calc(45);
+    line-height: 1.1em;
+  }
+}
+
+.f-linethru {
+  text-decoration: line-through;
+}
+
+.f-linethru-gfx {
+  position: relative;
+  &:after {
+    display: block;
+    content: "";
+    width: 120%;
+    left: -15%;
+    background-color: $color-wwj-blue;
+    height: 2px;
+    position: absolute;
+    line-height: inherit;
+    top: .5em;
+    transform: rotateZ(-10deg);
+
+  }
+}
+
+.f-underlined {
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid black;
+}
+
+.f-important {
+  color: #EE7030;
+  font-weight: 600;
+}
+
+.f-important-blue {
+  color: $color-wwj-blue;
+  font-weight: 800;
+  font-size: 16px;
+  text-align: center;
+}
+
+
+
