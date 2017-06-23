@@ -5,12 +5,14 @@ const port = 4000;
 // list of templates
 const templates = require('./../src/templates');
 
+// documentor setup & content for modules previews
+const documentor = require('./../src/templates/documentor/modules');
+
 // config data
 const config = require('./../src/config');
 
 // dummy data
 const dummy = require('./../src/dummy-data');
-
 
 
 app.use(express.static(__dirname + './../public'));
@@ -30,11 +32,47 @@ app.get('/', function (req, res) {
   });
 });
 
+
+app.get('/.components/:componentId', function (req, res) {
+
+  var docModules = documentor.documentor.modules;
+  var currentModule = null;
+
+  for (var idx = 0; idx < docModules.length; idx++) {
+    if(docModules[idx].id === req.params.componentId) {
+      currentModule = docModules[idx];
+    }
+  }
+
+  if(currentModule === null) {
+    res.send("whoops");
+  }
+
+  console.info(currentModule);
+
+  var moduleTemplate = 'documentor/' + currentModule.template;
+  if(!currentModule.template) {
+    moduleTemplate = 'documentor/documentor'
+  }
+
+
+  res.render(moduleTemplate, {
+    templates: templates.templates,
+    config: config.config,
+    data: dummy.dummy,
+    documentor: documentor.documentor,
+    component: currentModule
+  });
+});
+
+
+
 app.get('/.components', function (req, res) {
   res.render('documentor/documentor', {
     templates: templates.templates,
     config: config.config,
-    data: dummy.dummy
+    data: dummy.dummy,
+    documentor: documentor.documentor
   });
 });
 

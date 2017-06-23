@@ -3,5 +3,37 @@
 {% block bodyClasses %}f-documentor{% endblock %}
 
 {% block content %}
-    <div>Documentor</div>
+    <div class="row">
+        <div class="column text-center">
+            <h1>Documentor</h1>
+        </div>
+    </div>
+
+    <div class="row small-up-3">
+        {% for module in documentor.modules %}
+            <div class="column text-center">
+
+                <a href="/.components/{{ module.id }}" class="button primary">{{ module.id }}</a>
+            </div>
+        {% endfor %}
+    </div>
+    <hr>
+
+    {% if component %}
+
+        <div class="row">
+            <div class="column text-center">
+                <h2>{% block componentName %}{% if component.name %}{{ component.name }}{% else %}ID: {{ component.id }} {% endif %}{% endblock %}</h2>
+            </div>
+        </div>
+
+        <div>
+            {% block componentBody %}
+                <div class="text-center">
+                    Missing something, component has no template?
+                </div>
+            {% endblock %}
+        </div>
+    {% endif %}
+
 {% endblock %}
