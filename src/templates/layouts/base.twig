@@ -5,8 +5,8 @@
     <title>TemplateMaster</title>
     <link rel="stylesheet" href="/assets/dist/css/main.css">
 
-    {% include "modules/meta-seo.twig" %}
-    {% include "modules/meta-app-icons.twig" %}
+    {% include "../modules/meta/meta-seo.twig" %}
+    {% include "../modules/meta/meta-app-icons.twig" %}
 
     {% if config.gtm.enabled %}
         {% include "vendor/google-tag-manager/gtm_head.twig" %}
