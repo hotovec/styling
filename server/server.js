@@ -26,9 +26,15 @@ app.get('/', function (req, res) {
   res.render('index', {
     templates: templates.templates,
     config: config.config,
-    data: dummy.dummy,
-    namespaces: { 'thx': './templates' },
-    message: "some mesage"
+    data: dummy.dummy
+  });
+});
+
+app.get('/.components', function (req, res) {
+  res.render('documentor/documentor', {
+    templates: templates.templates,
+    config: config.config,
+    data: dummy.dummy
   });
 });
 
